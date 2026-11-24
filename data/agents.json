@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Agent Horizon",
+    "updated": "2026-11-25",
+    "timezone": "Asia/Tokyo",
+    "method": "Every number is read from the linked page on the date shown. Official or maintainer-run leaderboards first; aggregator snapshots only where the board itself could not be read, and labelled as such. Vendor self-reports are tagged 'vendor'. Scores from different boards, versions or harnesses are never compared directly.",
+    "labels": {
+      "independent": "Independent or maintainer-run board",
+      "maintainer": "Run by the benchmark's maintainers",
+      "self": "Self-submitted to a public board",
+      "vendor": "Vendor-reported, not independently checked"
+    }
+  },
+  "hero": {
+    "headline": "Agents finish about 6 in 10 everyday tasks, and only half do it every time.",
+    "stats": [
+      {"id": "best", "label": "Best ShellBench pass rate", "value": 62.5, "unit": "%", "note": "GPT-6 Astra, avg of 5 harnesses", "kind": "maintainer", "source": "https://openclaw.ai/blog/shellbench", "date": "2026-11-24"},
+      {"id": "consistent", "label": "Done right on all 3 tries", "value": 48.8, "unit": "%", "note": "GPT-6 Astra; 75.1% got it at least once", "kind": "maintainer", "source": "https://openclaw.ai/blog/shellbench", "date": "2026-11-24"},
+      {"id": "safety", "label": "Runs failing a safety check", "value": 15.7, "unit": "%", "note": "of 53,100 graded runs", "kind": "maintainer", "source": "https://openclaw.ai/blog/shellbench", "date": "2026-11-24", "invert": true},
+      {"id": "horizon", "label": "Longest reliable task (METR)", "value": 12.0, "unit": "h", "note": "50% time horizon, Claude Opus 4.6; doubles about every 129 days", "kind": "independent", "source": "https://metr.org/time-horizons/", "date": "2026-09-08", "max": 16}
+    ]
+  },
+  "scoreboard": [
+    {"id": "shellbench", "name": "ShellBench", "tests": "Everyday delegated work in a messy workspace (files, email, receipts) with safety traps", "leader": "GPT-6 Astra", "leader_detail": "avg across 5 harnesses", "score": 62.5, "unit": "%", "human": null, "runner_up": "Claude Fable 5.2 61.9%", "kind": "maintainer", "kind_note": "Led by the OpenClaw Foundation; OpenClaw is also one of the harnesses tested", "snapshot": "2026-11-24", "source": "https://openclaw.ai/blog/shellbench"},
+    {"id": "om2w", "name": "Online-Mind2Web", "tests": "300 real tasks on 136 live websites, judged by humans", "leader": "Hark Handoff (v1)", "leader_detail": "human eval", "score": 97.67, "unit": "%", "human": null, "runner_up": "Yutori Navigator n1.5 97.3%", "kind": "independent", "kind_note": "OSU NLP board; human evaluation by Careerflow", "snapshot": "2026-11-25", "source": "https://www.careerflow.ai/human-data/online-mind2web"},
+    {"id": "tbench", "name": "Terminal-Bench 4.1", "tests": "Hard command-line tasks, each with a verifier", "leader": "Copilot Fusion (max) + GitHub Copilot", "leader_detail": "± 2.9", "score": 71.2, "unit": "%", "human": null, "runner_up": "Opus 5.5 / Fable 5.2 + Claude Code 65.8%", "kind": "maintainer", "kind_note": "Stanford / Laude Institute board; agents submitted by their makers", "snapshot": "2026-11-25", "source": "https://www.tbench.ai/leaderboard"},
+    {"id": "osworld2", "name": "OSWorld 2.0", "tests": "108 long desktop workflows (median 1.6 h for a person)", "leader": "Claude Opus 5 (Max)", "leader_detail": "77.67% partial", "score": 44.33, "unit": "%", "human": null, "runner_up": "MuseSpark 1.3 39.25%", "kind": "maintainer", "kind_note": "Read via PersonalAgentBench from the board's results file (updated 2026-10-15)", "snapshot": "2026-10-22", "source": "https://personalagentbench.com/benchmarks/osworld/", "board": "https://osworld-v2.xlang.ai/"},
+    {"id": "osworldv", "name": "OSWorld-Verified", "tests": "369 desktop tasks (original set, now saturated)", "leader": "claude-fable-5", "leader_detail": "100 steps", "score": 86.0, "unit": "%", "human": 72.36, "runner_up": "claude-opus-5 83.4%", "kind": "maintainer", "kind_note": "Above the human baseline; read via PersonalAgentBench", "snapshot": "2026-11-05", "source": "https://personalagentbench.com/benchmarks/osworld/", "board": "https://os-world.github.io/"},
+    {"id": "gaia", "name": "GAIA", "tests": "Multi-step assistant questions with one exact answer", "leader": "Keen AgenticOS V1.1", "leader_detail": "test set", "score": 94.35, "unit": "%", "human": 92, "runner_up": "Shadow Harness V8.01 94.02%", "kind": "self", "kind_note": "Self-submitted; Princeton HAL's own rerun tops out at 74.55%", "snapshot": "2026-11-06", "source": "https://personalagentbench.com/benchmarks/gaia/", "board": "https://huggingface.co/datasets/gaia-benchmark/results_public"},
+    {"id": "webarena", "name": "WebArena", "tests": "812 tasks on self-hosted shop, forum, GitLab and map sites", "leader": "Narada AI Code", "leader_detail": "no code or trajectories released", "score": 86.1, "unit": "%", "human": 78.24, "runner_up": "Best with released code 74.3%", "kind": "self", "kind_note": "Top row unverifiable until its material is released", "snapshot": "2026-11-05", "source": "https://personalagentbench.com/benchmarks", "board": "https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit"},
+    {"id": "browsecomp", "name": "BrowseComp", "tests": "1,266 hard-to-find facts on the open web", "leader": "Gemini 3.1 Pro Preview", "leader_detail": "Kaggle board, ± 2.6", "score": 31.2, "unit": "%", "human": 29.2, "runner_up": "Vendor self-report: Kimi K3 91.2%", "kind": "independent", "kind_note": "Kaggle-run board, last updated 2026-03-26; vendor numbers above 90% use their own setups", "snapshot": "2026-11-05", "source": "https://personalagentbench.com/benchmarks/browsecomp/", "board": "https://www.kaggle.com/benchmarks/openai/browsecomp"},
+    {"id": "metr", "name": "METR time horizon", "tests": "Length of software task (in human time) an agent finishes 50% of the time", "leader": "Claude Opus 4.6", "leader_detail": "CI 5.3 to 60.6 h", "score": 12.0, "unit": "h", "human": null, "runner_up": "Mythos Preview (early) 17.4 h, flagged unreliable above 16 h", "kind": "independent", "kind_note": "METR's page has been frozen since 2026-09-08", "snapshot": "2026-09-08", "source": "https://metr.org/time-horizons/"}
+  ],
+  "hark": {
+    "headline": "Top of the live-web board; newest version not yet independently scored.",
+    "items": [
+      {"label": "Online-Mind2Web (human eval)", "value": 97.67, "unit": "%", "detail": "Handoff v1 is #1. Yutori Navigator n1.5 is #2 at 97.3%.", "kind": "independent", "date": "2026-11-25", "sources": [{"name": "Leaderboard (Careerflow / OSU)", "url": "https://www.careerflow.ai/human-data/online-mind2web"}, {"name": "Business Wire, 2026-08-05", "url": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent"}, {"name": "VentureBeat, 2026-08-05", "url": "https://venturebeat.com/technology/ai-startup-hark-unveils-first-product-an-affordable-fast-computer-use-agent-hark-handoff"}, {"name": "INTLO teardown, 2026-10-08", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped"}]},
+      {"label": "Handoff² internal browsing", "value": 82, "unit": "%", "compare": 73, "compare_label": "v1", "detail": "478 tasks on 238 sites; 46% less time per task, about 2x faster end to end; within 5 points of Claude Opus 5.5 (max) in the same harness.", "kind": "vendor", "date": "2026-11-12", "sources": [{"name": "Hark announcement, 2026-11-12", "url": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster"}, {"name": "MarkTechPost, 2026-11-16", "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"}]},
+      {"label": "Handoff² alignment", "value": 93.8, "unit": "%", "compare": 90.3, "compare_label": "v1", "detail": "Never checks out without approval; asks only when truly ambiguous.", "kind": "vendor", "date": "2026-11-12", "sources": [{"name": "Hark announcement", "url": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster"}]},
+      {"label": "Assistant Benchmark (general)", "value": 9.0, "unit": "/10", "detail": "9 of 15 dimensions tested. Muse leads at 9.3; Grok Bot and Town 8.8.", "kind": "independent", "kind_note": "One reviewer's hands-on scores", "date": "2026-11-19", "sources": [{"name": "Assistant Benchmark", "url": "https://assistantbenchmark.com/agents/hark?benchmark=general"}]}
+    ],
+    "notes": [
+      {"text": "Not in ShellBench: only open harnesses plus Claude Code and Codex were tested.", "url": "https://openclaw.ai/blog/shellbench"},
+      {"text": "Critique: v1's launch comparisons used prior-generation models (GPT-5.4/5.5, Opus 4.8), and two of its three benchmarks ran in Hark's own harness.", "url": "https://venturebeat.com/technology/ai-startup-hark-unveils-first-product-an-affordable-fast-computer-use-agent-hark-handoff"},
+      {"text": "Handoff² has no Online-Mind2Web result yet; every Handoff² number is self-reported.", "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"}
+    ]
+  },
+  "progress": {
+    "metr": {
+      "title": "How long a task agents can finish (METR 50% horizon, hours)",
+      "source": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "page": "https://metr.org/time-horizons/",
+      "doubling_days": 128.7,
+      "points": [
+        {"date": "2023-03-14", "model": "GPT-4", "hours": 0.07},
+        {"date": "2024-05-13", "model": "GPT-4o", "hours": 0.12},
+        {"date": "2024-10-22", "model": "Claude 3.5 Sonnet (new)", "hours": 0.34},
+        {"date": "2024-12-05", "model": "o1", "hours": 0.65},
+        {"date": "2025-02-24", "model": "Claude 3.7 Sonnet", "hours": 1.01},
+        {"date": "2025-04-16", "model": "o3", "hours": 2.0},
+        {"date": "2025-08-07", "model": "GPT-5", "hours": 3.38},
+        {"date": "2025-11-24", "model": "Claude Opus 4.5", "hours": 4.88},
+        {"date": "2025-12-11", "model": "GPT-5.2", "hours": 5.87},
+        {"date": "2026-02-05", "model": "Claude Opus 4.6", "hours": 11.98},
+        {"date": "2026-04-07", "model": "Claude Mythos Preview (early)", "hours": 17.41, "flag": "Above 16 h: METR calls this unreliable"}
+      ]
+    },
+    "climbs": [
+      {"name": "GAIA", "from": {"label": "GPT-4 + plugins, 2023 paper", "value": 15}, "to": {"label": "Keen AgenticOS V1.1, 2026-11-03", "value": 94.35}, "human": 92, "source": "https://personalagentbench.com/benchmarks/gaia/"},
+      {"name": "WebArena", "from": {"label": "Best GPT-4 agent, 2023 paper", "value": 14.41}, "to": {"label": "Best with released code, 2026", "value": 74.3}, "human": 78.24, "source": "https://personalagentbench.com/benchmarks"},
+      {"name": "OSWorld", "from": {"label": "Best model, 2024 paper", "value": 12.24}, "to": {"label": "claude-fable-5 (Verified), 2026-08-01", "value": 86.0}, "human": 72.36, "source": "https://personalagentbench.com/benchmarks/osworld/"},
+      {"name": "Online-Mind2Web", "from": {"label": "Operator, 2025 paper", "value": 61.3}, "to": {"label": "Hark Handoff, 2026-08", "value": 97.67}, "human": null, "source": "https://www.careerflow.ai/human-data/online-mind2web"},
+      {"name": "OpenAI agents on 2-4 h research tasks", "from": {"label": "March 2026", "value": 23}, "to": {"label": "October 2026", "value": 46}, "human": null, "kind": "vendor", "source": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/"}
+    ],
+    "timeline": [
+      {"date": "2026-05-28", "title": "Hermes Agent v0.15.0", "note": "The Velocity Release", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-06-06", "title": "Hermes Agent v0.16.0", "note": "The Surface Release", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-07-20", "title": "Hermes Agent v0.19.0", "note": "The Quicksilver Release", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-08-03", "title": "Hermes Agent v0.20.0", "note": "Voice and A2A", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-08-05", "title": "Hark Handoff v1 preview", "note": "97.7% on Online-Mind2Web", "group": "hark", "source": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent"},
+      {"date": "2026-08-28", "title": "Terminal-Bench 4.0", "note": "Top 64.85% by Sep 22", "group": "bench", "source": "https://decodethefuture.org/en/ai-agent-benchmarks-2026/"},
+      {"date": "2026-10-06", "title": "Hark Pro launches", "note": "Handoff ships to users", "group": "hark", "source": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped"},
+      {"date": "2026-10-14", "title": "Hermes Agent v0.22.0", "note": "The Threshold Release", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-11-05", "title": "Hermes Agent v0.23.0", "note": "The Hearth Release", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases"},
+      {"date": "2026-11-12", "title": "Hark Handoff²", "note": "82% vs 73% internal; 2x faster", "group": "hark", "source": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster"},
+      {"date": "2026-11-17", "title": "Copilot Fusion tops Terminal-Bench 4.1", "note": "71.2%", "group": "bench", "source": "https://www.tbench.ai/leaderboard"},
+      {"date": "2026-11-23", "title": "Hermes Agent v0.23.4", "note": "229 PRs rolled up", "group": "hermes", "source": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4"},
+      {"date": "2026-11-24", "title": "ShellBench published", "note": "Best 62.5%", "group": "bench", "source": "https://openclaw.ai/blog/shellbench"}
+    ],
+    "hermes_cadence": {"from": "v0.15.0 (2026-05-28)", "to": "v0.23.4 (2026-11-23)", "stable_releases": 38, "source": "https://github.com/NousResearch/hermes-agent/releases"}
+  },
+  "news": [
+    {"date": "2026-11-24", "title": "ShellBench launches: best agents finish 62.5% of everyday tasks; 15.7% of runs fail a safety check", "source_name": "OpenClaw", "url": "https://openclaw.ai/blog/shellbench"},
+    {"date": "2026-11-23", "title": "Anthropic's Claude Ship lets agents review, fix and approve pull requests (beta)", "source_name": "TechCrunch", "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"},
+    {"date": "2026-11-20", "title": "Computer use reaches the desktop: Gemini for Mac (Nov 19) and Claude Team/Enterprise beta (Nov 20)", "source_name": "ODSC", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/"},
+    {"date": "2026-11-17", "title": "Microsoft Autopilot: an always-on work agent with its own identity, memory and spending controls", "source_name": "ODSC / Ignite", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/"},
+    {"date": "2026-11-16", "title": "California sues OpenAI after test agents escaped a sandbox and hit Hugging Face", "source_name": "ODSC / NBC Bay Area", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/"}
+  ],
+  "harness": {
+    "title": "Same models, different harness (ShellBench)",
+    "note": "Mean pass rate across the same 11 models. Spread is only 2.36 points; the model matters more (median 45.7-pt gap) than the harness (6.2 pts).",
+    "source": "https://openclaw.ai/blog/shellbench",
+    "date": "2026-11-24",
+    "rows": [
+      {"name": "OpenClaw", "score": 45.23, "open": true, "minutes": 2.86},
+      {"name": "Pi", "score": 45.22, "open": true, "minutes": 1.31},
+      {"name": "Hermes", "score": 45.11, "open": true},
+      {"name": "Codex CLI", "score": 45.04, "open": true},
+      {"name": "Claude Code", "score": 42.87, "open": false}
+    ]
+  },
+  "sources": [
+    {"name": "ShellBench (OpenClaw blog)", "url": "https://openclaw.ai/blog/shellbench", "read": "2026-11-25"},
+    {"name": "Online-Mind2Web leaderboard (Careerflow)", "url": "https://www.careerflow.ai/human-data/online-mind2web", "read": "2026-11-25"},
+    {"name": "Terminal-Bench 4.1 leaderboard", "url": "https://www.tbench.ai/leaderboard", "read": "2026-11-25"},
+    {"name": "PersonalAgentBench: benchmarks", "url": "https://personalagentbench.com/benchmarks", "read": "2026-11-25"},
+    {"name": "PersonalAgentBench: OSWorld", "url": "https://personalagentbench.com/benchmarks/osworld/", "read": "2026-11-25"},
+    {"name": "PersonalAgentBench: GAIA", "url": "https://personalagentbench.com/benchmarks/gaia/", "read": "2026-11-25"},
+    {"name": "PersonalAgentBench: BrowseComp", "url": "https://personalagentbench.com/benchmarks/browsecomp/", "read": "2026-11-25"},
+    {"name": "DecodeTheFuture: Agent benchmarks 2026", "url": "https://decodethefuture.org/en/ai-agent-benchmarks-2026/", "read": "2026-11-25"},
+    {"name": "METR time horizons + data file", "url": "https://metr.org/time-horizons/", "read": "2026-11-25"},
+    {"name": "Hermes Agent releases (GitHub)", "url": "https://github.com/NousResearch/hermes-agent/releases", "read": "2026-11-25"},
+    {"name": "Hark: Introducing Handoff²", "url": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster", "read": "2026-11-25"},
+    {"name": "MarkTechPost: Handoff²", "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/", "read": "2026-11-25"},
+    {"name": "VentureBeat: Hark Handoff", "url": "https://venturebeat.com/technology/ai-startup-hark-unveils-first-product-an-affordable-fast-computer-use-agent-hark-handoff", "read": "2026-11-25"},
+    {"name": "Business Wire: Hark Handoff", "url": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent", "read": "2026-11-25 (search excerpt)"},
+    {"name": "INTLO: Hark Pro teardown", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped", "read": "2026-11-25 (search excerpt)"},
+    {"name": "Assistant Benchmark: Hark", "url": "https://assistantbenchmark.com/agents/hark?benchmark=general", "read": "2026-11-25"},
+    {"name": "TechCrunch: Claude Ship", "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/", "read": "2026-11-25"},
+    {"name": "ODSC: Last week in AI, Nov 16-22", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/", "read": "2026-11-25"}
+  ]
+}
