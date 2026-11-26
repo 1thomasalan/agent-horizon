@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Agent Horizon",
-    "updated": "2026-11-26",
+    "updated": "2026-11-27",
     "timezone": "Asia/Tokyo",
     "method": "Every number is read from the linked page on the date shown. Official or maintainer-run leaderboards first; aggregator snapshots only where the board itself could not be read, and labelled as such. Vendor self-reports are tagged 'vendor'. Scores from different boards, versions or harnesses are never compared directly.",
     "labels": {
@@ -90,11 +90,11 @@
     "hermes_cadence": {"from": "v0.15.0 (2026-05-28)", "to": "v0.23.4 (2026-11-23)", "stable_releases": 38, "source": "https://github.com/NousResearch/hermes-agent/releases"}
   },
   "news": [
-    {"date": "2026-11-24", "title": "Google: AI agents must reach Workspace data through MCP, not REST APIs; enforcement starts Feb 1, 2027", "source_name": "Google Workspace Updates", "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html"},
-    {"date": "2026-11-24", "title": "Walmart opens Black Friday shopping to Meta's Muse agent via its Agent Gateway, with spending caps and approvals", "source_name": "PPC Land", "url": "https://ppc.land/metas-muse-ai-can-now-shop-at-walmart-but-walmart-picks-the-products/"},
-    {"date": "2026-11-24", "title": "ShellBench launches: best agents finish 62.5% of everyday tasks; 15.7% of runs fail a safety check", "source_name": "OpenClaw", "url": "https://openclaw.ai/blog/shellbench"},
-    {"date": "2026-11-24", "title": "UK FCA sets expectations for agentic AI: firms stay accountable, tech platforms may need authorisation", "source_name": "Norton Rose Fulbright", "url": "https://www.regulationtomorrow.com/2026/11/new-fca-webpage-our-approach-to-agentic-ai/"},
-    {"date": "2026-11-23", "title": "Anthropic's Claude Ship lets agents review, fix and approve pull requests (beta)", "source_name": "TechCrunch", "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"}
+    {"date": "2026-11-25", "title": "Cloudflare launches Search for Agents (beta): one toggle gives a site an agent-readable /.well-known/search endpoint", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
+    {"date": "2026-11-25", "title": "Microsoft pulls its Agent Framework repo after malicious PyPI releases 1.26.1 and 1.26.2 stole credentials", "source_name": "AI Agent Store (citing Microsoft advisory)", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
+    {"date": "2026-11-25", "title": "Anthropic extends MCP with server-provided Skills (beta), long-running Tasks and Elicitation", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
+    {"date": "2026-11-24", "title": "Meta brings Muse to the UK with retail and travel connectors; every purchase needs user approval", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
+    {"date": "2026-11-23", "title": "Sierra raises $1.75B at a $30B valuation; ARR passed $400M for its customer-service agents", "source_name": "The Next Web", "url": "https://thenextweb.com/news/sierra-1-75b-series-f-30b-valuation-ai-agents"}
   ],
   "harness": {
     "title": "Same models, different harness (ShellBench)",
@@ -110,9 +110,9 @@
     ]
   },
   "sources": [
-    {"name": "ShellBench (OpenClaw blog)", "url": "https://openclaw.ai/blog/shellbench", "read": "2026-11-26"},
-    {"name": "Online-Mind2Web leaderboard (Careerflow)", "url": "https://www.careerflow.ai/human-data/online-mind2web", "read": "2026-11-26"},
-    {"name": "Terminal-Bench 4.1 leaderboard", "url": "https://www.tbench.ai/leaderboard", "read": "2026-11-26"},
+    {"name": "ShellBench (OpenClaw blog)", "url": "https://openclaw.ai/blog/shellbench", "read": "2026-11-27"},
+    {"name": "Online-Mind2Web leaderboard (Careerflow)", "url": "https://www.careerflow.ai/human-data/online-mind2web", "read": "2026-11-27"},
+    {"name": "Terminal-Bench 4.1 leaderboard", "url": "https://www.tbench.ai/leaderboard", "read": "2026-11-27"},
     {"name": "PersonalAgentBench: benchmarks", "url": "https://personalagentbench.com/benchmarks", "read": "2026-11-26"},
     {"name": "PersonalAgentBench: OSWorld", "url": "https://personalagentbench.com/benchmarks/osworld/", "read": "2026-11-25"},
     {"name": "PersonalAgentBench: GAIA", "url": "https://personalagentbench.com/benchmarks/gaia/", "read": "2026-11-25"},
@@ -126,10 +126,8 @@
     {"name": "Business Wire: Hark Handoff", "url": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent", "read": "2026-11-25 (search excerpt)"},
     {"name": "INTLO: Hark Pro teardown", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped", "read": "2026-11-25 (search excerpt)"},
     {"name": "Assistant Benchmark: Hark", "url": "https://assistantbenchmark.com/agents/hark?benchmark=general", "read": "2026-11-26"},
-    {"name": "TechCrunch: Claude Ship", "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/", "read": "2026-11-26"},
     {"name": "ODSC: Last week in AI, Nov 16-22", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/", "read": "2026-11-25"},
-    {"name": "Google Workspace Updates: MCP servers and agent policy", "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html", "read": "2026-11-26"},
-    {"name": "PPC Land: Muse shops Walmart", "url": "https://ppc.land/metas-muse-ai-can-now-shop-at-walmart-but-walmart-picks-the-products/", "read": "2026-11-26"},
-    {"name": "Regulation Tomorrow: FCA approach to agentic AI", "url": "https://www.regulationtomorrow.com/2026/11/new-fca-webpage-our-approach-to-agentic-ai/", "read": "2026-11-26"}
+    {"name": "AI Agent Store: agent news this week", "url": "https://aiagentstore.ai/ai-agent-news/this-week", "read": "2026-11-27"},
+    {"name": "TNW: Sierra raises $1.75B", "url": "https://thenextweb.com/news/sierra-1-75b-series-f-30b-valuation-ai-agents", "read": "2026-11-27"}
   ]
 }
