@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Agent Horizon",
-    "updated": "2026-11-27",
+    "updated": "2026-11-28",
     "timezone": "Asia/Tokyo",
     "method": "Every number is read from the linked page on the date shown. Official or maintainer-run leaderboards first; aggregator snapshots only where the board itself could not be read, and labelled as such. Vendor self-reports are tagged 'vendor'. Scores from different boards, versions or harnesses are never compared directly.",
     "labels": {
@@ -34,7 +34,7 @@
   "hark": {
     "headline": "Top of the live-web board; newest version not yet independently scored.",
     "items": [
-      {"label": "Online-Mind2Web (human eval)", "value": 97.67, "unit": "%", "detail": "Handoff v1 is #1. Yutori Navigator n1.5 is #2 at 97.3%.", "kind": "independent", "date": "2026-11-26", "sources": [{"name": "Leaderboard (Careerflow / OSU)", "url": "https://www.careerflow.ai/human-data/online-mind2web"}, {"name": "Business Wire, 2026-08-05", "url": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent"}, {"name": "VentureBeat, 2026-08-05", "url": "https://venturebeat.com/technology/ai-startup-hark-unveils-first-product-an-affordable-fast-computer-use-agent-hark-handoff"}, {"name": "INTLO teardown, 2026-10-08", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped"}]},
+      {"label": "Online-Mind2Web (human eval)", "value": 97.67, "unit": "%", "detail": "Handoff v1 is #1. Yutori Navigator n1.5 is #2 at 97.3%.", "kind": "independent", "date": "2026-11-28", "sources": [{"name": "Leaderboard (Careerflow / OSU)", "url": "https://www.careerflow.ai/human-data/online-mind2web"}, {"name": "Business Wire, 2026-08-05", "url": "https://www.businesswire.com/news/home/20260805041028/en/Hark-Announces-Handoff-the-Worlds-Best-Web-Browsing-AI-Agent"}, {"name": "VentureBeat, 2026-08-05", "url": "https://venturebeat.com/technology/ai-startup-hark-unveils-first-product-an-affordable-fast-computer-use-agent-hark-handoff"}, {"name": "INTLO teardown, 2026-10-08", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped"}]},
       {"label": "Handoff² internal browsing", "value": 82, "unit": "%", "compare": 73, "compare_label": "v1", "detail": "478 tasks on 238 sites; 46% less time per task, about 2x faster end to end; within 5 points of Claude Opus 5.5 (max) in the same harness.", "kind": "vendor", "date": "2026-11-12", "sources": [{"name": "Hark announcement, 2026-11-12", "url": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster"}, {"name": "MarkTechPost, 2026-11-16", "url": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"}]},
       {"label": "Handoff² alignment", "value": 93.8, "unit": "%", "compare": 90.3, "compare_label": "v1", "detail": "Never checks out without approval; asks only when truly ambiguous.", "kind": "vendor", "date": "2026-11-12", "sources": [{"name": "Hark announcement", "url": "https://hark.com/articles/introducing-hark-handoff-now-2x-faster"}]},
       {"label": "Assistant Benchmark (general)", "value": 9.0, "unit": "/10", "detail": "9 of 15 dimensions tested. Muse leads at 9.3; Grok Bot and Town 8.8.", "kind": "independent", "kind_note": "One reviewer's hands-on scores", "date": "2026-11-19", "sources": [{"name": "Assistant Benchmark", "url": "https://assistantbenchmark.com/agents/hark?benchmark=general"}]}
@@ -90,11 +90,11 @@
     "hermes_cadence": {"from": "v0.15.0 (2026-05-28)", "to": "v0.23.4 (2026-11-23)", "stable_releases": 38, "source": "https://github.com/NousResearch/hermes-agent/releases"}
   },
   "news": [
-    {"date": "2026-11-25", "title": "Cloudflare launches Search for Agents (beta): one toggle gives a site an agent-readable /.well-known/search endpoint", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
-    {"date": "2026-11-25", "title": "Microsoft pulls its Agent Framework repo after malicious PyPI releases 1.26.1 and 1.26.2 stole credentials", "source_name": "AI Agent Store (citing Microsoft advisory)", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
-    {"date": "2026-11-25", "title": "Anthropic extends MCP with server-provided Skills (beta), long-running Tasks and Elicitation", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
-    {"date": "2026-11-24", "title": "Meta brings Muse to the UK with retail and travel connectors; every purchase needs user approval", "source_name": "AI Agent Store", "url": "https://aiagentstore.ai/ai-agent-news/this-week"},
-    {"date": "2026-11-23", "title": "Sierra raises $1.75B at a $30B valuation; ARR passed $400M for its customer-service agents", "source_name": "The Next Web", "url": "https://thenextweb.com/news/sierra-1-75b-series-f-30b-valuation-ai-agents"}
+    {"date": "2026-11-27", "title": "CNBC: AI shopping agents hit retailer blocks; Amazon, eBay, United and Kohl's limit them, and a Visa study saw ~43% of test runs fail", "source_name": "CNBC", "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html"},
+    {"date": "2026-11-25", "title": "Cloudflare launches Search for Agents (beta): one toggle gives a site an agent-readable /.well-known/search endpoint", "source_name": "ToolSift", "url": "https://toolsift.ai/agent-news/2026-11-27/"},
+    {"date": "2026-11-25", "title": "Anthropic extends MCP with server-provided Skills (beta), long-running Tasks and Elicitation", "source_name": "Real Python", "url": "https://realpython.com/ai-news-weekly-2026-11-27/"},
+    {"date": "2026-11-24", "title": "Switzerland confirms its first AI-agent cyberattacks on critical infrastructure; 4 of 5 known attacks succeeded", "source_name": "ToolSift (citing NCSC, Reuters)", "url": "https://toolsift.ai/agent-news/2026-11-27/"},
+    {"date": "2026-11-24", "title": "Google sets usage tiers for Workspace MCP servers; agents must use MCP or the CLI from 1 Feb 2027", "source_name": "Real Python", "url": "https://realpython.com/ai-news-weekly-2026-11-27/"}
   ],
   "harness": {
     "title": "Same models, different harness (ShellBench)",
@@ -110,9 +110,9 @@
     ]
   },
   "sources": [
-    {"name": "ShellBench (OpenClaw blog)", "url": "https://openclaw.ai/blog/shellbench", "read": "2026-11-27"},
-    {"name": "Online-Mind2Web leaderboard (Careerflow)", "url": "https://www.careerflow.ai/human-data/online-mind2web", "read": "2026-11-27"},
-    {"name": "Terminal-Bench 4.1 leaderboard", "url": "https://www.tbench.ai/leaderboard", "read": "2026-11-27"},
+    {"name": "ShellBench (OpenClaw blog)", "url": "https://openclaw.ai/blog/shellbench", "read": "2026-11-28"},
+    {"name": "Online-Mind2Web leaderboard (Careerflow)", "url": "https://www.careerflow.ai/human-data/online-mind2web", "read": "2026-11-28"},
+    {"name": "Terminal-Bench 4.1 leaderboard", "url": "https://www.tbench.ai/leaderboard", "read": "2026-11-28"},
     {"name": "PersonalAgentBench: benchmarks", "url": "https://personalagentbench.com/benchmarks", "read": "2026-11-26"},
     {"name": "PersonalAgentBench: OSWorld", "url": "https://personalagentbench.com/benchmarks/osworld/", "read": "2026-11-25"},
     {"name": "PersonalAgentBench: GAIA", "url": "https://personalagentbench.com/benchmarks/gaia/", "read": "2026-11-25"},
@@ -127,7 +127,10 @@
     {"name": "INTLO: Hark Pro teardown", "url": "https://intlo.com/news/hark-pro-what-adcock-actually-shipped", "read": "2026-11-25 (search excerpt)"},
     {"name": "Assistant Benchmark: Hark", "url": "https://assistantbenchmark.com/agents/hark?benchmark=general", "read": "2026-11-26"},
     {"name": "ODSC: Last week in AI, Nov 16-22", "url": "https://opendatascience.com/last-week-in-ai-november-16-to-22-2026/", "read": "2026-11-25"},
-    {"name": "AI Agent Store: agent news this week", "url": "https://aiagentstore.ai/ai-agent-news/this-week", "read": "2026-11-27"},
-    {"name": "TNW: Sierra raises $1.75B", "url": "https://thenextweb.com/news/sierra-1-75b-series-f-30b-valuation-ai-agents", "read": "2026-11-27"}
+    {"name": "AI Agent Store: agent news this week", "url": "https://aiagentstore.ai/ai-agent-news/this-week", "read": "2026-11-28"},
+    {"name": "TNW: Sierra raises $1.75B", "url": "https://thenextweb.com/news/sierra-1-75b-series-f-30b-valuation-ai-agents", "read": "2026-11-28"},
+    {"name": "ToolSift: daily agent news 27 Nov", "url": "https://toolsift.ai/agent-news/2026-11-27/", "read": "2026-11-28"},
+    {"name": "Real Python: AI news weekly 27 Nov", "url": "https://realpython.com/ai-news-weekly-2026-11-27/", "read": "2026-11-28"},
+    {"name": "CNBC: AI shopping agents hit retailer blocks", "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html", "read": "2026-11-28"}
   ]
 }
